@@ -344,7 +344,7 @@ def resolve_vcf_allele_depth_values(
             if is_valid_integer(value):
                 allele_depth_values.append(value)
             else:
-                allele_depth_values.append("")
+                allele_depth_values.append("0")
 
     # 1. VarScan VCF: handle VarScan VCF lines where AD contains only 1 depth, and REF allele depth is in RD
     if len(allele_depth_values) == 1 and is_varscan_vcf(vcf_format_data_keys):
